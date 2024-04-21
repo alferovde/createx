@@ -1,18 +1,31 @@
+:root{
+
+  --accentColor: #FF5A30
+
+}
+
 body {
 margin: 0;
 padding: 0;
+font-family: "Ubuntu", sans-serif;
+background-color: #fff;
 }
 
 .container{
-  max-width: 1248px;
+  max-width: 1230px;
   margin: 0 auto;
-  background-color: #e2b9b9;
+ 
+}
+
+
+.active  {
+  color: var( --accentColor) !important;
 }
 
 
 @media (max-width: 1024px){
   .container{
-    width: 887px;
+    max-width: 887px;
     margin: 0 auto;
     background-color: #c9e2b9;
   }
@@ -32,3 +45,23 @@ padding: 0;
     background-color: #6786ec;
   }
 }
+
+
+/* 
+.ubuntu-regular {
+  font-family: "Ubuntu", sans-serif;
+  font-weight: 400;
+  font-style: normal;
+}
+
+.ubuntu-bold {
+  font-family: "Ubuntu", sans-serif;
+  font-weight: 700;
+  font-style: normal;
+} */
+
+/* .lato-black {
+  font-family: "Lato", sans-serif;
+  font-weight: 900;
+  font-style: normal;
+} */
