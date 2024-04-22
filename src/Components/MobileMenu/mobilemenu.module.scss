@@ -1,0 +1,45 @@
+.mobile_menu__wrapper {
+  position: relative;
+}
+.mobile_menu__bg {
+  position: fixed;
+  background-color: #000000b6;
+  top: 0;
+  left: 0;
+  right: 0;
+  bottom: 0;
+  z-index: -5;
+  opacity: 0;
+  transition: 0.2s;
+}
+
+.mobile_menu__bg__open {
+  opacity: 1;
+  position: fixed;
+  background-color: #000000b6;
+  top: 0;
+  left: 0;
+  right: 0;
+  bottom: 0;
+  z-index: 500;
+
+  transition: 0.5s;
+}
+
+.mobile_menu__btn {
+  position: relative;
+
+  width: 50px;
+  height: 50px;
+}
+
+.mobile_menu__container {
+  width: 300px;
+  height: 100vh;
+  position: fixed;
+  background-color: #00eeff;
+  top: 0;
+  right: 0;
+  z-index: 1000;
+  color: white;
+}

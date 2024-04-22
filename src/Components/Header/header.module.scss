@@ -1,5 +1,5 @@
 .header {
-  background-color: #23be8b;
+  background-color: transparent;
   padding: 20px 0;
   box-sizing: border-box;
 }
@@ -49,5 +49,27 @@
       text-decoration: none;
       color: black;
     }
+  }
+}
+
+.header__mobile_menu {
+  display: none;
+}
+
+@media (max-width: 1105px) {
+  .header__logo {
+    margin-right: 15px;
+  }
+}
+@media (max-width: 1035px) {
+  .header__mobile_menu {
+    display: flex;
+  }
+  .header__contact,
+  .header__menu {
+    display: none;
+  }
+  .header__wrapper {
+    justify-content: space-between;
   }
 }

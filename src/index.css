@@ -14,7 +14,10 @@ background-color: #fff;
 .container{
   max-width: 1230px;
   margin: 0 auto;
- 
+  padding-left: 10px;
+  padding-right: 10px;
+
+  background-color: #da4646;  
 }
 
 
@@ -23,11 +26,12 @@ background-color: #fff;
 }
 
 
-@media (max-width: 1024px){
+@media (max-width: 1229px){
   .container{
-    max-width: 887px;
-    margin: 0 auto;
-    background-color: #c9e2b9;
+    /* max-width: 1200px ; */
+    /* margin: 0 auto; */
+
+   
   }
 }
 
