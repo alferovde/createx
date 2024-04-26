@@ -1,0 +1,42 @@
+.main_value {
+  min-height: 360px;
+
+  padding-top: 180px;
+}
+
+.main_value__items {
+  margin-top: 60px;
+}
+
+@media (max-width: 780px) {
+  .main_value {
+    min-height: 360px;
+
+    padding-top: 80px;
+  }
+
+  .main_value__items {
+    margin-top: 60px;
+
+    ul {
+      flex-direction: column;
+      display: flex;
+      gap: 30px;
+
+      li {
+        width: 100%;
+        min-height: 250px;
+
+        // background-color: #d88e8e;
+        &:nth-child(2) {
+          border: none;
+        }
+
+        p {
+          max-width: 80%;
+          font-size: 20px;
+        }
+      }
+    }
+  }
+}

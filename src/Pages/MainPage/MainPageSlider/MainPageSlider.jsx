@@ -14,10 +14,11 @@ const MainPageSlider = ({ dataSlider }) => {
           style={{
             backgroundImage: `url(${global_path_server + slide.img})`,
           }}
+          key={slide.id}
         >
           <div className="slide__content container">
             <div className="slide__info ">
-              <h2> {slide.title}</h2>
+              <h1> {slide.title}</h1>
               <p>
                 Cras ultrices leo vitae non viverra. Fringilla nisi quisque
                 consequat, dignissim vitae proin ipsum sed. Pellentesque nec
@@ -37,7 +38,6 @@ const MainPageSlider = ({ dataSlider }) => {
     });
   };
 
-  console.log("slier-->", dataSlider);
   const pagination = {
     clickable: true,
     renderBullet: function (index, className) {

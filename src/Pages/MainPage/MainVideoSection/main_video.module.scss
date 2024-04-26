@@ -1,0 +1,128 @@
+.main_video__wrapper {
+  video {
+    margin: 0 auto;
+    display: flex;
+    border-radius: 4px;
+    max-width: 100%;
+  }
+}
+
+.main_video__title {
+  margin-top: 120px;
+
+  p {
+    padding: 24px 0 60px 0;
+  }
+}
+
+.main_video__videp {
+  position: relative;
+}
+
+.main_video__overlay {
+  position: absolute;
+  background-color: #00000081;
+  top: 0;
+  bottom: 0;
+  right: 0;
+  left: 0;
+}
+.main_video__play_btn {
+  width: 100px;
+  height: 100px;
+  background-color: var(--accentColor);
+  border-radius: 50%;
+  right: 40%;
+  position: absolute;
+  transform: translate(-40%, -50%);
+  top: 50%;
+  z-index: 55;
+
+  &::after {
+    content: "";
+
+    background-color: transparent;
+    position: absolute;
+    top: 50%;
+    left: 60%;
+    transform: translate(-40%, -50%);
+    border: 20px solid transparent;
+    border-left: 30px solid white;
+  }
+}
+
+.main_video__pause_btn {
+  width: 100px;
+  height: 100px;
+  background-color: rgba(0, 0, 255, 0.411);
+  border-radius: 50%;
+  right: 10%;
+  position: absolute;
+
+  top: 10%;
+  z-index: 55;
+
+  &::before {
+    content: "";
+    width: 10px;
+    height: 30px;
+    background-color: #fff;
+
+    position: absolute;
+    top: 50%;
+    left: 60%;
+    transform: translate(-40%, -50%);
+  }
+  &::after {
+    content: "";
+    width: 10px;
+    height: 30px;
+    background-color: #fff;
+
+    position: absolute;
+    top: 50%;
+    left: 40%;
+    transform: translate(-50%, -50%);
+  }
+}
+
+@media (max-width: 600px) {
+  .main_video__play_btn {
+    width: 70px;
+    height: 70px;
+
+    right: 40%;
+
+    &::after {
+      content: "";
+
+      border: 15px solid transparent;
+      border-left: 20px solid white;
+    }
+  }
+  .main_video__pause_btn {
+    width: 70px;
+    height: 70px;
+  }
+}
+
+@media (max-width: 465px) {
+  .main_video__title {
+    margin-top: 50px;
+
+    h2 {
+      font-size: 36px;
+    }
+
+    p {
+      padding: 24px 0 60px 0;
+    }
+  }
+  .main_video__play_btn {
+    right: 30%;
+
+    &::after {
+      content: "";
+    }
+  }
+}
