@@ -1,0 +1,137 @@
+.mySwiper_testimonials {
+  height: 400px;
+  max-width: 85%;
+
+  margin-left: 0;
+
+  .swiper-slide {
+    height: 300px;
+    margin-top: 60px;
+    display: flex;
+    flex-direction: column;
+    // background-color: #f79a9a;
+
+    color: #424551;
+    align-items: start;
+    p {
+      text-align: left;
+      font-size: 16px;
+      line-height: 160%;
+    }
+
+    .user_info {
+      text-align: left;
+      font-size: 16px;
+      p {
+        font-size: 14px;
+        color: #787a80;
+      }
+    }
+
+    img {
+      width: 72px;
+      height: 72px;
+      border-radius: 50%;
+    }
+  }
+
+  .swiper-button-prev {
+    position: absolute;
+    top: 310px;
+    left: 85%;
+    width: 50px;
+    height: 50px;
+    border-radius: 50%;
+    background-image: url("../../Images/prev-btn.png");
+    background-repeat: no-repeat;
+    background-position: center center;
+    transition: 0.1s;
+    &:active {
+      background-color: var(--accentColor);
+    }
+
+    &::after {
+      display: none;
+    }
+  }
+
+  .swiper-button-next {
+    position: absolute;
+    top: 310px;
+    left: 92%;
+    width: 50px;
+    height: 50px;
+    border-radius: 50%;
+    transition: 0.1s;
+    background-image: url("../../Images/prev-btn.png");
+    background-repeat: no-repeat;
+    background-position: center center;
+    transform: rotate(180deg);
+
+    &:active {
+      background-color: var(--accentColor);
+    }
+
+    &::after {
+      display: none;
+    }
+  }
+}
+
+@media (max-width: 880px) {
+  .mySwiper_testimonials {
+    .swiper-button-prev {
+      position: absolute;
+      top: 320px;
+      left: 75%;
+    }
+
+    .swiper-button-next {
+      position: absolute;
+      top: 320px;
+      left: 82%;
+    }
+  }
+}
+
+@media (max-width: 600px) {
+  .mySwiper_testimonials {
+    max-width: 100%;
+
+    .swiper-slide {
+      height: 300px;
+      margin-top: 60px;
+      display: flex;
+      flex-direction: column;
+      // background-color: #f79a9a;
+
+      color: #424551;
+      align-items: start;
+      p {
+        text-align: justify;
+        font-size: 18px;
+      }
+
+      .user_info {
+        text-align: left;
+        font-size: 16px;
+        p {
+          font-size: 14px;
+          color: #787a80;
+        }
+      }
+
+      img {
+        width: 72px;
+        height: 72px;
+        border-radius: 50%;
+      }
+    }
+
+    .swiper-button-prev {
+      position: absolute;
+      top: 320px;
+      left: 70%;
+    }
+  }
+}

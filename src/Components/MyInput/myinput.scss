@@ -1,0 +1,76 @@
+.input__wrapper {
+  label {
+    text-transform: capitalize;
+  }
+
+  input {
+    border: 1px solid #9a9ca5;
+    margin-top: 8px;
+    font-family: "Ubuntu", sans-serif;
+  }
+}
+
+.textarea__wrapper {
+  label {
+    text-transform: capitalize;
+  }
+
+  textarea {
+    border: 1px solid #9a9ca5;
+    margin-top: 8px;
+    border-radius: 4px;
+    font-family: "Ubuntu", sans-serif;
+    font-size: 16px;
+    background-color: #f4f5f6;
+    color: #9a9ca5;
+    width: 100%;
+
+    padding: 14px;
+    box-sizing: border-box;
+    min-height: 66px;
+  }
+}
+
+.me_checkbox {
+  display: flex;
+
+  label {
+    width: 100%;
+  }
+
+  .custom_chekcbox {
+    display: none;
+  }
+
+  .custom_chekcbox + label {
+    position: relative;
+    padding-left: 30px;
+    height: 1.5em;
+    display: flex;
+    align-items: center;
+    color: #000;
+    cursor: pointer;
+    user-select: none;
+
+    &::before {
+      content: "";
+      position: absolute;
+      left: 0;
+      top: 0;
+      width: 16px;
+      height: 16px;
+      border: 1px solid var((--accentColor));
+      border-radius: 4px;
+      transition: 0.3s;
+    }
+  }
+
+  .custom_chekcbox:checked + label::before {
+    background-image: url("../../Images/check.svg");
+    background-size: 70%;
+    background-repeat: no-repeat;
+    background-position: center center;
+
+    background-color: var(--accentColor);
+  }
+}

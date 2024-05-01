@@ -1,0 +1,30 @@
+.my_button_color {
+  background-color: var(--accentColor);
+  color: white;
+  border: none;
+  transition: 0.2s;
+  &:active {
+    background-color: #fff;
+    color: #ff5a30;
+    border: 1px solid var(--accentColor);
+  }
+}
+
+.my_button_transparent {
+  background-color: #fff;
+  color: var(--accentColor);
+  border: 1px solid var(--accentColor);
+  transition: 0.2s;
+  &:active {
+    background-color: #ff5a30;
+    color: #fff;
+  }
+}
+
+.my_button {
+  border-radius: 4px;
+  font-size: 16px;
+  font-weight: 600;
+  text-transform: uppercase;
+  cursor: pointer;
+}

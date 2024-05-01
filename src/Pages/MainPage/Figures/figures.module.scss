@@ -1,0 +1,28 @@
+.figures {
+  min-height: 100vh;
+  margin-top: -100px;
+  width: 100%;
+  background-image: url("../../../Images/bg-image_figures.png");
+  background-position: -550px -550px;
+  background-size: contain;
+  background-repeat: no-repeat;
+}
+
+.figures__wrapper {
+  padding-top: 150px;
+}
+
+.figures__items {
+  display: flex;
+  justify-content: center;
+  margin-top: 60px;
+  gap: 50px;
+
+  padding: 0;
+}
+
+@media (max-width: 773px) {
+  .figures__items {
+    flex-wrap: wrap;
+  }
+}

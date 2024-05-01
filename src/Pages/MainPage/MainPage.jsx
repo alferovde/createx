@@ -8,11 +8,17 @@ import MainVideoSection from "./MainVideoSection/MainVideoSection";
 import MainPageValues from "./MainPageValues/MainPageValues";
 import MainPageRequestForm from "./MainPageRequestForm/MainPageRequestForm";
 import OurServiceSection from "./OurServiceSection/OurServiceSection";
+import SliderPortfolio from "../../Components/SliderPortfolio/SliderPortfolio";
+import Clients from "../../Components/Clients/Clients";
+import Testimonials from "../../Components/Testimonials/Testimonials";
+import Figures from "./Figures/Figures";
+import ContactForm from "../../Components/ContactForm/ContactForm";
 
 const MainPage = () => {
   const isLoading = useSelector((state) => state.mainPage.isLoading);
   const isError = useSelector((state) => state.mainPage.isError);
   const mainPageData = useSelector((state) => state.mainPage.mainPageData);
+
   const dispatch = useDispatch();
 
   useEffect(() => {
@@ -29,6 +35,15 @@ const MainPage = () => {
         <MainPageValues />
         <MainPageRequestForm />
         <OurServiceSection data={mainPageData.service_list} />
+        <SliderPortfolio data={mainPageData.service_projects} />
+        <Clients
+          bgColor={"#f4f5f6"}
+          title={"Supported by 12+ partners"}
+          data={mainPageData.service_clients}
+        />
+        <Testimonials data={mainPageData.clients_reviews} />
+        <Figures data={mainPageData.recent_news} />
+        <ContactForm />
       </div>
     </PageProvider>
   );

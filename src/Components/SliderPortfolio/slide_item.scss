@@ -1,0 +1,148 @@
+.mySwiperProject {
+  height: 500px;
+  padding-top: 150px;
+
+  .swiper-slide {
+    max-height: 440px;
+    width: 390px;
+
+    display: flex;
+    flex-direction: column;
+
+    position: relative;
+    border-radius: 4px;
+    border: none;
+    background-size: cover;
+    background-position: center center;
+
+    -webkit-box-shadow: 0px 0px 26px 5px rgba(34, 60, 80, 0.07);
+    -moz-box-shadow: 0px 0px 26px 5px rgba(34, 60, 80, 0.07);
+    box-shadow: 0px 0px 26px 5px rgba(34, 60, 80, 0.07);
+
+    .slide_info {
+      height: 100px;
+      background-color: #fff;
+      width: 100%;
+      padding: 16px 0 24px 0;
+      box-sizing: border-box;
+      position: absolute;
+      bottom: 0;
+      border: #fff 1px solid;
+
+      display: flex;
+      flex-direction: column;
+      overflow: hidden;
+
+      button {
+        display: none;
+      }
+      p {
+        font-size: 20px;
+        font-weight: 600;
+        margin: 0;
+        color: var(--greyColorTitle);
+        margin-bottom: 10px;
+        border: none;
+      }
+
+      span {
+        font-size: 14px;
+        color: var(--greyColorText);
+      }
+
+      transition: 0.2s;
+    }
+
+    &:hover {
+      .slide_info {
+        height: 150px;
+        position: absolute;
+
+        z-index: 50;
+        transition: 0.2s;
+
+        button {
+          display: block;
+          width: 172px;
+          height: 44px;
+          margin: 0 auto;
+          border: 1px solid var(--accentColor);
+          color: var(--accentColor);
+          font-size: 14px;
+          font-weight: 600;
+          margin-top: 24px;
+          border-radius: 4px;
+          background-color: transparent;
+          cursor: pointer;
+
+          transition: 0.3s;
+          &:active {
+            background-color: var(--accentColor);
+            color: var(--accentColor);
+            color: white;
+          }
+        }
+      }
+    }
+  }
+
+  ////nav buttons
+  ///
+  ///
+
+  .swiper-button-prev {
+    position: absolute;
+    top: 50px;
+    left: 88%;
+    width: 50px;
+    height: 50px;
+    border-radius: 50%;
+    background-image: url("../../Images/prev-btn.png");
+    background-repeat: no-repeat;
+    background-position: center center;
+    transition: 0.1s;
+    &:active {
+      background-color: var(--accentColor);
+    }
+
+    &::after {
+      display: none;
+    }
+  }
+
+  .swiper-button-next {
+    position: absolute;
+    top: 50px;
+    left: 94%;
+    width: 50px;
+    height: 50px;
+    border-radius: 50%;
+    transition: 0.1s;
+    background-image: url("../../Images/prev-btn.png");
+    background-repeat: no-repeat;
+    background-position: center center;
+    transform: rotate(180deg);
+
+    &:active {
+      background-color: var(--accentColor);
+    }
+
+    &::after {
+      display: none;
+    }
+  }
+}
+
+@media (max-width: 800px) {
+  .mySwiperProject {
+    .swiper-button-prev {
+      top: 100px;
+      left: 40%;
+    }
+
+    .swiper-button-next {
+      top: 100px;
+      left: 53%;
+    }
+  }
+}

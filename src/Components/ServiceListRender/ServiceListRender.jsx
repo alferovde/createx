@@ -3,9 +3,6 @@ import ServiceListItem from "./ServiceListItem/ServiceListItem";
 import style from "./service_list.module.scss";
 import ServiceListItemFull from "./ServiceListItem/ServiceListItemFull";
 const ServiceListRender = ({ data, full }) => {
-  console.log("data->", data);
-  console.log("full->", full);
-
   const renderList = () => {
     if (!full) {
       return data?.map((item) => {
