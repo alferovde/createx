@@ -14,8 +14,13 @@ font-family: "Ubuntu", sans-serif;
 background-color: #fff;
 }
 
+.skeleton{
+  min-height: 100vh;
+}
+
 .container{
   max-width: 1230px;
+  /* min-height: 100vh; */
   margin: 0 auto;
   padding-left: 10px;
   padding-right: 10px;

@@ -1,0 +1,28 @@
+.page_title {
+  min-height: 600px;
+
+  margin-top: -92px;
+
+  background-repeat: no-repeat;
+  background-size: cover;
+  background-position: center right;
+}
+
+.page_title__wrapper {
+  padding-top: 150px;
+
+  h2 {
+    font-size: 72px;
+    max-width: 600px;
+    margin: 0;
+    padding: 0;
+    text-align: left;
+  }
+
+  p {
+    font-size: 20px;
+    max-width: 600px;
+    color: var(--greyColorText);
+    line-height: 150%;
+  }
+}

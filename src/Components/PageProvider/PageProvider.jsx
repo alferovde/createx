@@ -9,7 +9,11 @@ const PageProvider = ({ children, isError, isLoading }) => {
   return (
     <>
       {isLoading ? (
-        <div className="container">
+        <div className="skeleton container">
+          <Skeleton active />
+          <Skeleton active />
+          <Skeleton active />
+          <Skeleton active />
           <Skeleton active />
         </div>
       ) : isError.result ? (

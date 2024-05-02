@@ -1,0 +1,151 @@
+.service_item_component {
+  max-height: 420px;
+  margin-bottom: 120px;
+  display: flex;
+  justify-content: space-between;
+  width: 100%;
+}
+.service_item_img {
+  width: 45%;
+
+  order: 2;
+
+  img {
+    width: 100%;
+  }
+
+  background-position: center center;
+  background-size: cover;
+}
+.service_item_content {
+  max-width: 55%;
+  order: 1;
+  box-sizing: border-box;
+
+  padding: 76px 80px 76px 0;
+
+  h3 {
+    padding: 0;
+    margin: 0;
+    font-size: 32px;
+    line-height: 150%;
+    color: var(--greyColorTitle);
+  }
+
+  p {
+    font-size: 16px;
+    line-height: 160%;
+    color: var(--greyColorText);
+    max-width: 100%;
+  }
+
+  button {
+    width: 160px;
+    height: 44px;
+    background-color: transparent;
+    margin-top: 48px;
+  }
+}
+
+.reverse {
+  .service_item_img {
+    width: 45%;
+    order: 1;
+  }
+  .service_item_content {
+    width: 55%;
+    order: 2;
+    padding: 76px 0 76px 80px;
+  }
+}
+
+@media (max-width: 1000px) {
+  .service_item_content {
+    padding: 36px 40px 36px 0;
+  }
+  .reverse {
+    .service_item_content {
+      padding: 36px 0 36px 40px;
+    }
+  }
+}
+
+@media (max-width: 684px) {
+  .service_item_img {
+    width: 35%;
+  }
+  .service_item_content {
+    max-width: 65%;
+
+    h3 {
+      font-size: 24px;
+    }
+
+    p {
+      font-size: 14px;
+    }
+
+    button {
+      max-width: 150px;
+      height: 36px;
+      background-color: transparent;
+      margin-top: 48px;
+      font-size: 12px;
+    }
+  }
+
+  .reverse {
+    .service_item_img {
+      width: 35%;
+    }
+    .service_item_content {
+      width: 65%;
+    }
+  }
+}
+
+@media (max-width: 570px) {
+  .service_item_component {
+    max-height: 620px;
+    margin-bottom: 60px;
+    flex-direction: column;
+    width: 100%;
+  }
+  .service_item_img {
+    width: 100%;
+    height: 200px;
+    order: 1;
+    background-size: cover;
+    background-repeat: no-repeat;
+    margin-bottom: 30px;
+  }
+
+  .service_item_content {
+    max-width: 100%;
+    height: 50%;
+
+    padding: 0;
+    order: 2;
+    text-align: center;
+    button {
+      margin-top: 28px;
+    }
+  }
+
+  .reverse {
+    .service_item_img {
+      order: 1;
+      width: 100%;
+      background-size: cover;
+    }
+    .service_item_content {
+      width: 100%;
+      order: 2;
+      padding: 0;
+      text-align: center;
+      button {
+        margin-top: 28px;
+      }
+    }
+  }
+}
