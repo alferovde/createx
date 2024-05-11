@@ -1,4 +1,4 @@
-import React, { useEffect } from "react";
+import React, { useEffect, useState } from "react";
 import PageProvider from "../../Components/PageProvider/PageProvider";
 import { useSelector, useDispatch } from "react-redux";
 import PagetitleComponent from "../../Components/PagetitleComponent/PagetitleComponent";
@@ -9,7 +9,13 @@ import MyButton from "../../Components/MyButton/MyButton";
 import PositionItem from "./PositionItem";
 import ValuesComponent from "../../Components/ValuesComponent/ValuesComponent";
 import ContactForm from "../../Components/ContactForm/ContactForm";
+import ModalWrapper from "../../Components/ModalsComponents/ModalWrapper/ModalWrapper";
+import ModalSendSV from "../../Components/ModalsComponents/ModalSendSV/ModalSendSV";
+import ModalSubscribe from "../../Components/ModalsComponents/ModalSubscribe/ModalSubscribe";
+
 const AvailablePosition = () => {
+  const [modalActive, setModalActive] = useState(false);
+  const [activeModalChildren, setActiveModalChildren] = useState(undefined);
   const isLoading = useSelector((state) => state.positionPage.isLoading);
   const isError = useSelector((state) => state.positionPage.isError);
   const positionPageData = useSelector(
@@ -27,7 +33,11 @@ const AvailablePosition = () => {
     });
   };
 
-  console.log(positionPageData);
+  const handlerGetModalComponent = (typeChildren) => {
+    if (typeChildren === "subscribe") setActiveModalChildren(ModalSubscribe);
+    if (typeChildren === "send cv") setActiveModalChildren(ModalSendSV);
+    setModalActive(!modalActive);
+  };
   return (
     <PageProvider isError={isError} isLoading={isLoading}>
       <div className={style.position_page}>
@@ -45,8 +55,15 @@ const AvailablePosition = () => {
               about new vacancies.
             </p>
             <div className={style.position_page__btn}>
-              <MyButton>subscribe</MyButton>
-              <MyButton color>send cv</MyButton>
+              <MyButton onClick={() => handlerGetModalComponent("subscribe")}>
+                subscribe
+              </MyButton>
+              <MyButton
+                color
+                onClick={() => handlerGetModalComponent("send cv")}
+              >
+                send cv
+              </MyButton>
             </div>
           </div>
         </div>
@@ -56,6 +73,14 @@ const AvailablePosition = () => {
           <ValuesComponent data={positionPageData.values_items} />
         </div>
         <ContactForm />
+        {modalActive && (
+          <ModalWrapper
+            modalActive={modalActive}
+            setModalActive={setModalActive}
+          >
+            {activeModalChildren}
+          </ModalWrapper>
+        )}
       </div>
     </PageProvider>
   );
