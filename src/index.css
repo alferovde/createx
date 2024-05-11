@@ -20,7 +20,7 @@ background-color: #fff;
 
 .container{
   max-width: 1230px;
-  /* min-height: 100vh; */
+  
   margin: 0 auto;
   padding-left: 10px;
   padding-right: 10px;
@@ -58,8 +58,7 @@ h2{
 
 @media (max-width: 1229px){
   .container{
-    /* max-width: 1200px ; */
-    /* margin: 0 auto; */
+
 
    
   }

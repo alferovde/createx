@@ -1,0 +1,15 @@
+.worklist__wrapper {
+  display: flex;
+  flex-wrap: wrap;
+  // gap: 30px;
+  justify-content: space-between;
+  min-height: 500px;
+  padding-top: 50px;
+  padding-bottom: 100px;
+}
+
+@media (max-width: 1189px) {
+  .worklist__wrapper {
+    justify-content: space-around;
+  }
+}

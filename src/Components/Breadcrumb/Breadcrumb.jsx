@@ -4,10 +4,12 @@ import style from "./breadcrumb.module.scss";
 const Breadcrumb = () => {
   const ref = useLocation();
 
+  // console.log("path--,", ref.pathname.split("%20").join(" "));
+
   return (
     <div className={style.breadcrumb}>
       <p>
-        Homepage <span>/ {ref.pathname.slice(1)}</span>
+        Homepage <span> / {ref.pathname.split("%20").join(" ").slice(1)}</span>
       </p>
     </div>
   );

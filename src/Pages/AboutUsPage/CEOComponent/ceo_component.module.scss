@@ -1,0 +1,150 @@
+.ceo__wrapper {
+  background-image: url("../../../Images/bg-image_figures.png");
+  background-position: 200% 100px;
+  background-repeat: no-repeat;
+  min-height: 700px;
+  padding-bottom: 100px;
+  margin-top: 120px;
+}
+
+.ceo__container {
+  display: flex;
+  height: 700px;
+
+  background-image: url("../../../Images/ceo-img.jpg");
+  background-repeat: no-repeat;
+  background-size: 42%;
+  background-position: left bottom;
+}
+
+.ceo__content {
+  max-width: 735px;
+  height: 570px;
+  background-color: #ffffff86;
+  margin-left: auto;
+  position: relative;
+  padding: 80px 105px 80px 77px;
+  box-sizing: border-box;
+  -webkit-box-shadow: 0px 50px 39px 0px rgba(34, 60, 80, 0.2);
+  -moz-box-shadow: 0px 50px 39px 0px rgba(34, 60, 80, 0.2);
+  box-shadow: 0px 50px 39px 0px rgba(34, 60, 80, 0.2);
+
+  p {
+    font-size: 20px;
+    font-weight: 700;
+    line-height: 150%;
+  }
+
+  &::before {
+    position: absolute;
+    content: "";
+    background-image: url("../../../Images/braces.svg");
+    top: 100px;
+    left: 30px;
+    width: 28px;
+    height: 20px;
+    background-repeat: no-repeat;
+  }
+}
+
+.ceo__content__footer {
+  display: flex;
+  justify-content: space-between;
+  margin-top: 60px;
+  p {
+    display: flex;
+    flex-direction: column;
+    font-size: 16px;
+    font-weight: 700;
+    span {
+      font-size: 14px;
+      color: var(--greyColorText);
+      font-weight: normal;
+    }
+  }
+}
+
+@media (max-width: 1000px) {
+  .ceo__container {
+    display: flex;
+    height: 600px;
+
+    background-size: 32%;
+  }
+}
+
+@media (max-width: 754px) {
+  .ceo__wrapper {
+    margin-top: 20px;
+  }
+  .ceo__container {
+    background-image: none;
+  }
+}
+
+@media (max-width: 658px) {
+  .ceo__content {
+    p {
+      font-size: 16px;
+    }
+
+    .ceo__content__footer {
+      margin-top: 120px;
+      p {
+        font-size: 16px;
+      }
+    }
+  }
+}
+
+@media (max-width: 566px) {
+  .ceo__content {
+    p {
+      font-size: 16px;
+    }
+
+    .ceo__content__footer {
+      margin-top: 20%;
+      p {
+        font-size: 16px;
+      }
+    }
+  }
+}
+
+@media (max-width: 500px) {
+  .ceo__content {
+    max-width: 100%;
+    height: 570px;
+
+    padding: 50px 35px 40px 37px;
+
+    p {
+      font-size: 16px;
+
+      text-align: justify;
+    }
+
+    &::before {
+      top: 70px;
+      left: 5px;
+    }
+  }
+
+  .ceo__content__footer {
+    display: flex;
+    justify-content: space-between;
+
+    img {
+      width: 30%;
+    }
+
+    p {
+      font-size: 14px;
+
+      span {
+        font-size: 12px;
+      }
+    }
+  }
+}

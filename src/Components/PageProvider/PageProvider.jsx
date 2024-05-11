@@ -1,11 +1,7 @@
 import React from "react";
 import { Skeleton, Button, Result, Image } from "antd";
 import tower from "../../Images/RuinedTower3.png";
-const PageProvider = ({ children, isError, isLoading }) => {
-  // console.log("-isLoading->", isLoading);
-  // console.log("-isError.result->", isError.result);
-  // console.log("-isError.code->", isError.code);
-
+const PageProvider = ({ children, isError, isLoading, style }) => {
   return (
     <>
       {isLoading ? (
@@ -25,7 +21,7 @@ const PageProvider = ({ children, isError, isLoading }) => {
           icon={<Image width={200} src={tower} />}
         />
       ) : (
-        <div> {children}</div>
+        <div style={style}> {children}</div>
       )}
     </>
   );

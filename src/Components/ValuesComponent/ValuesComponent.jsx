@@ -6,7 +6,11 @@ const ValuesComponent = ({ data }) => {
     return data?.map((item) => {
       return (
         <li key={item.id}>
-          <img src={global_path_server + item.img} alt={item.title} />
+          {item.icon ? (
+            item.icon
+          ) : (
+            <img src={global_path_server + item.img} alt={item.title} />
+          )}
           <h3> {item.title}</h3>
           <p>{item.text}</p>
         </li>

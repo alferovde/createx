@@ -1,3 +1,45 @@
 .about_us {
   min-height: 100vh;
 }
+
+.about_us_statistik {
+  min-height: 200px;
+}
+
+.about_us_values {
+  background-color: #f4f5f6;
+
+  ul {
+    margin: 0;
+  }
+
+  .about_us_values__title {
+    min-height: 160px;
+
+    padding-top: 80px;
+  }
+}
+
+@media (max-width: 700px) {
+  .about_us_values {
+    background-color: #f4f5f6;
+    .about_us_values__title {
+      min-height: 160px;
+
+      padding-top: 80px;
+    }
+
+    ul {
+      flex-direction: column;
+      align-items: center;
+      width: 100%;
+
+      gap: 20px;
+
+      li {
+        width: 90%;
+        border: none !important;
+      }
+    }
+  }
+}

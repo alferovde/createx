@@ -26,3 +26,19 @@
     line-height: 150%;
   }
 }
+
+@media (max-width: 699px) {
+  .page_title__wrapper {
+    h2 {
+      font-size: 60px;
+    }
+  }
+}
+
+@media (max-width: 500px) {
+  .page_title__wrapper {
+    h2 {
+      font-size: 48px;
+    }
+  }
+}

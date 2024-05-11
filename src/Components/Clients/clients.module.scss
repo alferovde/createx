@@ -1,7 +1,8 @@
 .slients__wrapper {
   text-align: center;
 
-  span {
+  h2 {
+    margin-bottom: 24px;
   }
   padding-top: 80px;
 }
@@ -10,10 +11,12 @@
   display: flex;
   list-style: none;
   justify-content: space-between;
+  flex-wrap: wrap;
   margin-top: 60px;
   margin-bottom: 0;
+
   padding: 0;
-  gap: 10px;
+  gap: 70px;
 }
 
 @media (max-width: 800px) {

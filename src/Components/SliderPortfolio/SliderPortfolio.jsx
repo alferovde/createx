@@ -6,10 +6,11 @@ import "swiper/css/navigation";
 import "./slide_item.scss";
 import { Navigation, FreeMode } from "swiper/modules";
 const global_path_server = "http://127.0.0.1:8000/storage/";
-const SliderPortfolio = ({ data }) => {
+const SliderPortfolio = ({ data, title }) => {
   let dataProjects = data?.service_projects;
   let dataTypes = data?.types;
 
+  console.log("data-->", data);
   const renderSlider = () => {
     return dataProjects?.map((item) => {
       let subTitle = "";
@@ -39,7 +40,7 @@ const SliderPortfolio = ({ data }) => {
     <div className={style.slider_portfolio}>
       <div className={`${style.slider_portfolio__wrapper} container `}>
         <div className={style.slider_title}>
-          <h2>Browse our selected projects and learn more about our work</h2>
+          <h2>{title}</h2>
         </div>
         <div className={style.slider_slider}>
           <Swiper

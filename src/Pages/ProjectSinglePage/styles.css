@@ -1,0 +1,104 @@
+ /* .swiper {
+    width: 100%;
+    height: 100%;
+  }
+  
+  .swiper-slide {
+    text-align: center;
+    font-size: 18px;
+    background: #fff;
+  
+    
+    display: flex;
+    justify-content: center;
+    align-items: center;
+  }
+  
+  .swiper-slide img {
+    display: block;
+    width: 100%;
+    height: 100%;
+    object-fit: cover;
+  }
+  
+
+  .swiper {
+    width: 100%;
+    height: 300px;
+    margin-left: auto;
+    margin-right: auto;
+  }
+  
+  .swiper-slide {
+    background-size: cover;
+    background-position: center;
+  }/* */
+  
+  .mySwiperSingleProject2 {
+    height: 500px;
+    margin-top: 50px;
+  }
+  
+  .mySwiperSingleProject {
+    height: 100px;
+    max-width: 100%;
+    margin-left: 0px;
+    margin-top: 10px;
+    margin-bottom: 100px;
+
+  
+   
+  }
+
+
+  
+  .mySwiperSingleProject .swiper-slide {
+    max-width: 100px;
+    height: 100%;
+    opacity: 0.4;
+
+   border-radius: 14px;
+   
+  }
+
+  .mySwiperSingleProject .swiper-slide img {
+
+
+   border-radius: 4px;
+   
+  }
+
+  .mySwiperSingleProject2 .swiper-slide img {
+
+
+    border-radius: 4px;
+    
+   }
+ 
+  .mySwiperSingleProject .swiper-slide-thumb-active {
+    opacity: 1;
+    border-radius: 14px;
+  }
+   /* 
+  .swiper-slide img {
+    display: block;
+    width: 100%;
+    height: 100%;
+    object-fit: cover;
+  }  */
+
+  @media(max-width:650px){
+    .mySwiperSingleProject {
+      display: none;
+  
+    
+     
+    }
+
+    .mySwiperSingleProject2 {
+      height:350px;
+      margin-top: 50px;
+      margin-bottom: 50px;
+    }
+  
+  }

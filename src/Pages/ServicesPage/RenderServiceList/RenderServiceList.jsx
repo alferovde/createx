@@ -5,7 +5,7 @@ const RenderServiceList = ({ data }) => {
   console.log(data);
 
   const renderList = () => {
-    return data?.service_list?.slice(0, 4).map((item) => {
+    return data?.service_list?.slice(1, 5).map((item) => {
       return <ServiceItem key={item.id} {...item} />;
     });
   };

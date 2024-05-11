@@ -35,7 +35,10 @@ const MainPage = () => {
         <MainPageValues />
         <MainPageRequestForm />
         <OurServiceSection data={mainPageData.service_list} />
-        <SliderPortfolio data={mainPageData.service_projects} />
+        <SliderPortfolio
+          data={mainPageData.service_projects}
+          title={"Browse our selected projects and learn more about our work"}
+        />
         <Clients
           bgColor={"#f4f5f6"}
           title={"Supported by 12+ partners"}

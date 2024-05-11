@@ -1,0 +1,19 @@
+.work_page {
+  min-height: 100vh;
+}
+
+.work_page_list {
+  margin-top: -80px;
+  min-height: 100vh;
+}
+
+.work_page_loadMore {
+  width: 300px;
+  display: flex;
+  justify-content: center;
+  margin-bottom: 50px;
+  h2 {
+    font-size: 16px;
+    margin-left: 10px;
+  }
+}

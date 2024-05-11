@@ -1,0 +1,134 @@
+.single_service_page {
+  min-height: 100vh;
+}
+
+.single_service_page_content {
+  margin-top: 120px;
+  margin-bottom: 160px;
+  display: flex;
+}
+
+.single_service_page__offer {
+  display: flex;
+  min-height: 500px;
+}
+
+.single_service_page__img {
+  width: 65%;
+
+  img {
+    width: 100%;
+  }
+}
+
+.single_service_page__description {
+  width: 35%;
+  margin-left: 100px;
+
+  h3 {
+    font-size: 46px;
+    margin-bottom: 60px;
+  }
+}
+
+.single_service_steps {
+  h2 {
+    text-align: left;
+    margin-bottom: 60px;
+  }
+}
+
+.single_service_benefits {
+  background-color: var(--greyColorTitle);
+  min-height: 565px;
+
+  padding-top: 80px;
+  box-sizing: border-box;
+
+  h2 {
+    color: white;
+  }
+
+  p {
+    font-size: 18px;
+    color: var(--greyColorText);
+    text-align: center;
+    margin-bottom: 60px;
+  }
+
+  h3 {
+    color: white !important;
+  }
+}
+
+.single_service_benefits__wrapper {
+  ul {
+    li {
+      &:nth-child(2) {
+        border-image: linear-gradient(#787a8000, #cecece, #787a8000) 30;
+      }
+    }
+  }
+}
+
+.single_service_page__clients {
+  padding-bottom: 100px;
+  background-color: #f4f5f6;
+}
+
+@media (max-width: 699px) {
+  .single_service_benefits__wrapper {
+    ul {
+      flex-direction: column;
+      display: flex;
+      gap: 30px;
+
+      li {
+        width: 100%;
+        min-height: 250px;
+
+        &:nth-child(2) {
+          border: none;
+        }
+
+        p {
+          max-width: 80%;
+          font-size: 20px;
+        }
+      }
+    }
+  }
+}
+
+@media (max-width: 699px) {
+  .single_service_page__offer {
+    flex-direction: column;
+  }
+
+  .single_service_page__img {
+    width: 100%;
+    margin-bottom: 30px;
+  }
+
+  .single_service_page__description {
+    width: 80%;
+    margin-left: 0px;
+    padding-left: 70px;
+
+    h3 {
+      font-size: 46px;
+      margin-bottom: 60px;
+      max-width: 70%;
+    }
+  }
+}
+
+@media (max-width: 499px) {
+  .single_service_steps {
+    h2 {
+      text-align: center;
+      font-size: 30px;
+      margin-bottom: 60px;
+    }
+  }
+}
