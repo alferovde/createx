@@ -3,7 +3,7 @@ export const headerMenu = [
   { id: 1, href: "/service", link: "Services" },
   { id: 2, href: "/works", link: "Work" },
   { id: 3, href: "/news", link: "News" },
-  { id: 4, href: "/contact", link: "Contacts" },
+  { id: 4, href: "/contacts", link: "Contacts" },
 ];
 
 export const footerMenu = [
@@ -480,5 +480,90 @@ export const worldMapData = [
     description:
       "Lorem ipsum dolor sit amet consectetur, adipisicing elit. Illum, animi.",
     position: { top: "42%", left: "46%" },
+  },
+];
+
+export const contactPage = [
+  {
+    id: 1,
+
+    title: "Project Development",
+  },
+  {
+    id: 2,
+
+    title: "Interior Design",
+  },
+  {
+    id: 3,
+
+    title: "Repairs",
+  },
+
+  {
+    id: 4,
+
+    title: "Construction",
+  },
+];
+
+export const cities = [
+  {
+    id: 1,
+
+    title: "Moscow",
+  },
+  {
+    id: 2,
+
+    title: "Paris",
+  },
+  {
+    id: 3,
+
+    title: "New York",
+  },
+  {
+    id: 4,
+
+    title: "Tokio",
+  },
+  {
+    id: 5,
+
+    title: "Attava",
+  },
+];
+
+export const officesAddress = [
+  {
+    id: 1,
+
+    title: "New York, USA",
+    address: "8502 Preston Rd. Inglewood, New York 98380",
+    link: "See on the map",
+    phone: "(405) 555-0128",
+    email: "hello@createx.com",
+    schudule: "Mon - Fri 9:00 - 18:00",
+  },
+  {
+    id: 2,
+
+    title: "New Jersey, USA",
+    address: "2464 Royal Ln. Mesa, New Jersey 45463",
+    link: "See on the map",
+    phone: "(808) 555-0111",
+    email: "hello@createx.com",
+    schudule: "Mon - Fri 9:00 - 18:00",
+  },
+  {
+    id: 3,
+
+    title: "San Francisco, USA",
+    address: "8502 Preston Rd. Inglewood, San Francisco 98380",
+    link: "See on the map",
+    phone: "(505) 555-0125",
+    email: "hello@createx.com",
+    schudule: "Mon - Fri 9:00 - 18:00",
   },
 ];

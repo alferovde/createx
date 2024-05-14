@@ -1,0 +1,143 @@
+.contact_page {
+  min-height: 100vh;
+}
+
+.contact_page__contact__wrapper {
+  text-align: center;
+  padding-top: 120px;
+  margin-bottom: 80px;
+}
+
+.contact_page__contact_form {
+  display: flex;
+  justify-content: space-between;
+  padding-top: 60px;
+  width: 100%;
+}
+
+.contact_page__contact_form_img {
+  max-width: 40%;
+
+  img {
+    width: 100%;
+  }
+}
+.contact_page__contact_form_form {
+  max-width: 600px;
+  margin-left: 10px;
+  gap: 20px;
+  display: flex;
+  flex-direction: column;
+}
+
+.contact_page__contact_form_checkbox {
+  display: flex;
+  flex-direction: column;
+}
+
+.contact_page__contact_form_checkbox__wrapper {
+  display: flex;
+  margin-top: 30px;
+
+  input + label {
+    &::before {
+      border-radius: 50% !important;
+    }
+  }
+}
+
+.contact_page__contact_form_item {
+  display: flex;
+  justify-content: space-between;
+  text-align: left;
+
+  &:last-child {
+    margin-top: 50px;
+  }
+
+  textarea {
+    width: 600px;
+    min-height: 128px;
+  }
+  input {
+    height: 52px;
+    max-width: 285px;
+  }
+  // select {
+  //   height: 52px;
+  //   // width: 810px;
+  // }
+
+  button {
+    width: 210px;
+    height: 52px;
+  }
+}
+
+@media (max-width: 1046px) {
+  .contact_page__contact_form {
+    justify-content: center;
+
+    width: 100%;
+  }
+  .contact_page__contact_form_img {
+    display: none;
+  }
+  .contact_page__contact_form_form {
+    max-width: 100%;
+  }
+
+  .contact_page__contact_form_item {
+    width: 100%;
+    margin: 0 auto;
+    flex-direction: column;
+    gap: 30px;
+    input {
+      height: 52px;
+      max-width: 100%;
+    }
+
+    select {
+      height: 52px;
+      width: 100% !important;
+    }
+
+    textarea {
+      width: 100%;
+      min-height: 128px;
+    }
+
+    &:last-child {
+      margin-top: 50px;
+      display: flex;
+      flex-direction: row;
+      align-items: center;
+    }
+  }
+}
+
+@media (max-width: 780px) {
+  .contact_page__contact_form_checkbox {
+    display: flex;
+    flex-direction: column;
+  }
+
+  .contact_page__contact_form_checkbox__wrapper {
+    display: flex;
+    margin-top: 30px;
+    gap: 10%;
+    input + label {
+      &::before {
+        border-radius: 50% !important;
+      }
+    }
+  }
+}
+
+@media (max-width: 538px) {
+  .contact_page__contact_form_item {
+    &:last-child {
+      flex-direction: column;
+    }
+  }
+}

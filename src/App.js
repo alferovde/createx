@@ -13,6 +13,7 @@ import ProjectSinglePage from "./Pages/ProjectSinglePage/ProjectSinglePage";
 import AvailablePosition from "./Pages/AvailablePosition/AvailablePosition";
 import NewsPage from "./Pages/NewsPage/NewsPage";
 import SingleNewsPage from "./Pages/SingleNewsPage/SingleNewsPage";
+import ContactPage from "./Pages/ContactPage/ContactPage";
 function App() {
   return (
     <div className="main">
@@ -28,6 +29,7 @@ function App() {
         <Route path={`/work/:title`} element={<ProjectSinglePage />} />
         <Route path={`/news`} element={<NewsPage />} />
         <Route path={`/news/:title`} element={<SingleNewsPage />} />
+        <Route path={`/contacts`} element={<ContactPage />} />
       </Routes>
 
       <Footer />
