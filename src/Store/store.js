@@ -6,6 +6,8 @@ import workPageSlice from "./Reducers/WorkPageReducer";
 import SingleProjectPageReducer from "./Reducers/SingleProjectPageReducer";
 import aboutPageSlice from "./Reducers/AboutPageReducer";
 import positionPageSlice from "./Reducers/AvailablePositionReducer";
+import NewsPageReducer from "./Reducers/NewsPageReducer";
+import singleNewsPageSlice from "./Reducers/SingleNewsPagereducer";
 export const store = configureStore({
   reducer: {
     mainPage: mainPageSlice,
@@ -15,5 +17,7 @@ export const store = configureStore({
     projectSinglePage: SingleProjectPageReducer,
     aboutPage: aboutPageSlice,
     positionPage: positionPageSlice,
+    newsPage: NewsPageReducer,
+    singleNewsPage: singleNewsPageSlice,
   },
 });

@@ -11,6 +11,8 @@ import ServiceSinglePage from "./Pages/ServiceSinglePage/ServiceSinglePage";
 import WorkPage from "./Pages/WorkPage/WorkPage";
 import ProjectSinglePage from "./Pages/ProjectSinglePage/ProjectSinglePage";
 import AvailablePosition from "./Pages/AvailablePosition/AvailablePosition";
+import NewsPage from "./Pages/NewsPage/NewsPage";
+import SingleNewsPage from "./Pages/SingleNewsPage/SingleNewsPage";
 function App() {
   return (
     <div className="main">
@@ -24,6 +26,8 @@ function App() {
         <Route path={`/service/:title`} element={<ServiceSinglePage />} />
         <Route path={`/works`} element={<WorkPage />} />
         <Route path={`/work/:title`} element={<ProjectSinglePage />} />
+        <Route path={`/news`} element={<NewsPage />} />
+        <Route path={`/news/:title`} element={<SingleNewsPage />} />
       </Routes>
 
       <Footer />
