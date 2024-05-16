@@ -3,14 +3,15 @@ import style from "./slider_portfolio.module.scss";
 import { Swiper, SwiperSlide } from "swiper/react";
 import "swiper/css";
 import "swiper/css/navigation";
+import { useNavigate } from "react-router-dom";
 import "./slide_item.scss";
 import { Navigation, FreeMode } from "swiper/modules";
 const global_path_server = "http://127.0.0.1:8000/storage/";
 const SliderPortfolio = ({ data, title }) => {
   let dataProjects = data?.service_projects;
   let dataTypes = data?.types;
+  const navigate = useNavigate();
 
-  console.log("data-->", data);
   const renderSlider = () => {
     return dataProjects?.map((item) => {
       let subTitle = "";
@@ -29,7 +30,17 @@ const SliderPortfolio = ({ data, title }) => {
           <div className="slide_info">
             <p>{item.title}</p>
             <span>{subTitle}</span>
-            <button>View Project</button>
+            <button
+              onClick={() => {
+                navigate(`/work/${item.title}`, {
+                  state: { id: item.id },
+                });
+                //???
+                // window.location.reload();
+              }}
+            >
+              View Project
+            </button>
           </div>
         </SwiperSlide>
       );
@@ -77,7 +88,13 @@ const SliderPortfolio = ({ data, title }) => {
           </Swiper>
           <div className={style.slider_btn}>
             <h3>Explore all our works</h3>
-            <button>View portfolio</button>
+            <button
+              onClick={() => {
+                navigate(`/works/`);
+              }}
+            >
+              View portfolio
+            </button>
           </div>
         </div>
       </div>

@@ -9,7 +9,7 @@ const TeamItem = ({ img, name, role }) => {
       if (item.id == 2 || item.id == 5) {
         return undefined;
       } else {
-        return <li>{item.svg}</li>;
+        return <li key={item.id}>{item.svg}</li>;
       }
     });
   };

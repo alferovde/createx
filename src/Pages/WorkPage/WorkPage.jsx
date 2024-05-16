@@ -47,8 +47,6 @@ const WorkPage = () => {
     }
   };
 
-  console.log("work data--->", projectArray);
-
   return (
     <PageProvider isError={isError} isLoading={isLoading}>
       <div className={style.work_page}>

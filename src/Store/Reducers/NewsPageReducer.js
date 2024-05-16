@@ -11,8 +11,6 @@ export const fetchNewsPage = createAsyncThunk(
   "newsPage/getNewsPage",
 
   async (data) => {
-    console.log("---->", data);
-
     let result = await axios
       .get(
         `http://127.0.0.1:8000/api/createx/news/${data.currentCategory}?page=${data.currentPage}`
@@ -33,7 +31,7 @@ export const newsPageSlice = createSlice({
     });
     builder.addCase(fetchNewsPage.fulfilled, (state, action) => {
       state.isLoading = false;
-      console.log("service page-->", action.payload.data);
+
       state.newsPageData = action.payload.data;
     });
     builder.addCase(fetchNewsPage.rejected, (state, action) => {

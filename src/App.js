@@ -1,5 +1,6 @@
 import Footer from "./Components/Footer/Footer";
 import Header from "./Components/Header/Header";
+import { useState, useEffect } from "react";
 import "./index.css";
 import "animate.css";
 import MainPage from "./Pages/MainPage/MainPage";
@@ -14,6 +15,7 @@ import AvailablePosition from "./Pages/AvailablePosition/AvailablePosition";
 import NewsPage from "./Pages/NewsPage/NewsPage";
 import SingleNewsPage from "./Pages/SingleNewsPage/SingleNewsPage";
 import ContactPage from "./Pages/ContactPage/ContactPage";
+import OnTop from "./Components/OnTop/OnTop";
 function App() {
   return (
     <div className="main">
@@ -31,6 +33,8 @@ function App() {
         <Route path={`/news/:title`} element={<SingleNewsPage />} />
         <Route path={`/contacts`} element={<ContactPage />} />
       </Routes>
+
+      <OnTop />
 
       <Footer />
     </div>

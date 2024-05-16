@@ -7,7 +7,7 @@ const ConstructiveDecisions = () => {
   const renderList = () => {
     return constructiveData.map((item) => {
       return (
-        <li>
+        <li key={item.id}>
           <img src={check} alt="check" />
           <p>{item.title}</p>
         </li>

@@ -4,8 +4,8 @@ import style from "./news_list.module.scss";
 import NewsListItem from "./NewsListItem";
 const NewsList = ({ data }) => {
   const renderList = () => {
-    return data?.map((item) => {
-      return <NewsListItem data={item} />;
+    return data?.map((item, index) => {
+      return <NewsListItem data={item} key={index} />;
     });
   };
 

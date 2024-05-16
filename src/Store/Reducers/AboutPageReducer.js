@@ -26,17 +26,14 @@ export const aboutPageSlice = createSlice({
   reducers: {},
   extraReducers: (builder) => {
     builder.addCase(fetchAboutPAge.pending, (state, action) => {
-      // console.log(action);
       state.isLoading = true;
     });
     builder.addCase(fetchAboutPAge.fulfilled, (state, action) => {
-      // console.log("-->", action);
       state.isLoading = false;
       state.isError.result = false;
       state.aboutPageData = action.payload.data;
     });
     builder.addCase(fetchAboutPAge.rejected, (state, action) => {
-      // console.log(action);
       state.isLoading = false;
       state.isError.result = true;
       state.isError.code = action.error;

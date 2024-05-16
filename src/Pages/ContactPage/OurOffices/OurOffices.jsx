@@ -11,7 +11,7 @@ const OurOffices = () => {
   const renderOffices = () => {
     return officesAddress.map((item) => {
       return (
-        <div className={style.our__office__item_office}>
+        <div className={style.our__office__item_office} key={item.id}>
           <h3>{item.title}</h3>
           <p>{item.address}</p>
           <a href="#">{item.link}</a>

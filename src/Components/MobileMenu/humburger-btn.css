@@ -25,14 +25,17 @@
   #toggle:checked + .hamburger .top-bun {
     transform: rotate(-45deg);
     margin-top: 25px;
+    background-color: #fff;
   }
   #toggle:checked + .hamburger .bottom-bun {
     opacity: 0;
     transform: rotate(45deg);
+    background-color: #fff;
   }
   #toggle:checked + .hamburger .meat {
     transform: rotate(45deg);
     margin-top: -7px;
+    background-color: #fff;
   }
   
   #toggle:checked + .hamburger + .nav {

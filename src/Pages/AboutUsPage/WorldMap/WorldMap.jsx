@@ -26,6 +26,7 @@ const WorldMap = () => {
         <div
           className={style.world_map__country}
           style={{ top: item.position.top, left: item.position.left }}
+          key={item.id}
         >
           {item.flag}
           <div

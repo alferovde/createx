@@ -16,7 +16,7 @@ const Accordion = ({ data }) => {
   const renderAccordionList = () => {
     return accordionValue?.map((item) => {
       return (
-        <div className={style.accordion__title}>
+        <div className={style.accordion__title} key={item.id}>
           <div className={style.accordion__title__header}>
             <button
               onClick={() => handlerToggleButton(item.id)}

@@ -24,8 +24,6 @@ const ProjectSinglePage = () => {
     dispatch(fetchSingleProjectPage(params.state.id));
   }, []);
 
-  console.log(singleProjectData.similar_project_Array);
-
   return (
     <PageProvider isError={isError} isLoading={isLoading}>
       <div className={style.project_single_page}>
@@ -40,7 +38,7 @@ const ProjectSinglePage = () => {
               {singleProjectData.projectPageData?.project_goal
                 .split("&")
                 .map((item) => {
-                  return <p>{item}</p>;
+                  return <p key={item}>{item}</p>;
                 })}
             </div>
             <div className={style.project_single_page__description__attributes}>

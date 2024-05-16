@@ -14,7 +14,7 @@ const AboutSlider = ({ data }) => {
   const renderSlider = () => {
     return data?.map((item) => {
       return (
-        <SwiperSlide>
+        <SwiperSlide key={item.id}>
           <img src={global_path_server + item.slider_img} alt="slider" />
           <p>{item.slider_text}</p>
         </SwiperSlide>
@@ -25,7 +25,7 @@ const AboutSlider = ({ data }) => {
   const renderSecondSlide = () => {
     return data?.map((item) => {
       return (
-        <SwiperSlide>
+        <SwiperSlide key={item.id}>
           <p className="history">
             <div className="circle"></div>
             {item.history}

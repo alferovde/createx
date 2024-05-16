@@ -16,8 +16,6 @@ export const fetchMainPAge = createAsyncThunk(
         return response;
       });
 
-    console.log(result);
-
     return result;
   }
 );
@@ -28,17 +26,14 @@ export const mainPageSlice = createSlice({
   reducers: {},
   extraReducers: (builder) => {
     builder.addCase(fetchMainPAge.pending, (state, action) => {
-      // console.log(action);
       state.isLoading = true;
     });
     builder.addCase(fetchMainPAge.fulfilled, (state, action) => {
-      // console.log("-->", action);
       state.isLoading = false;
       state.isError.result = false;
       state.mainPageData = action.payload.data;
     });
     builder.addCase(fetchMainPAge.rejected, (state, action) => {
-      // console.log(action);
       state.isLoading = false;
       state.isError.result = true;
       state.isError.code = action.error;

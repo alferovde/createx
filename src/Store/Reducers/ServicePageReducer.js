@@ -15,7 +15,6 @@ export const fetchServicePage = createAsyncThunk(
       .get("http://127.0.0.1:8000/api/createx/services")
       .then((response) => response);
 
-    console.log("service page-->", result);
     return result;
   }
 );

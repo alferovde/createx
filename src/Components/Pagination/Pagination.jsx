@@ -7,7 +7,7 @@ const Pagination = ({ data, dataPage, setDataPage }) => {
     return arr.map((item, index) => {
       return (
         <li
-          key={item.index}
+          key={index}
           className={dataPage.currentPage === index + 1 ? style.active : ""}
           onClick={() => setDataPage({ ...dataPage, currentPage: index + 1 })}
         >

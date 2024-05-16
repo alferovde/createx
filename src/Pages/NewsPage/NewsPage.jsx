@@ -13,8 +13,7 @@ const NewsPage = () => {
   const isLoading = useSelector((state) => state.newsPage.isLoading);
   const newsPage = useSelector((state) => state.newsPage.newsPageData);
   const dispatch = useDispatch();
-  // const [currentCategory, setCurrentCatgory] = useState(0);
-  // const [currentPage, setCurrentPage] = useState(1);
+
   const [dataPage, setDataPage] = useState({
     currentCategory: 0,
     currentPage: 1,

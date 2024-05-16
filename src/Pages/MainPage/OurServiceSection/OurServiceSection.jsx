@@ -1,9 +1,9 @@
 import React from "react";
 import style from "./service_section.module.scss";
 import ServiceListRender from "../../../Components/ServiceListRender/ServiceListRender";
-import SVGComponent from "../../../Components/SVGComponent/SVGComponent";
-
+import { useNavigate } from "react-router-dom";
 const OurServiceSection = ({ data }) => {
+  const navigate = useNavigate();
   return (
     <div className={style.our_service}>
       <div className={`${style.our_service__wrapper} container`}>
@@ -20,7 +20,7 @@ const OurServiceSection = ({ data }) => {
         </div>
         <div className={style.our_service__btn}>
           <h3>Learn more about our services</h3>
-          <button>View services</button>
+          <button onClick={() => navigate("/service")}>View services</button>
         </div>
       </div>
     </div>

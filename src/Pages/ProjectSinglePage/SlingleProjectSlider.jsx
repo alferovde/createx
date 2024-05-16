@@ -13,13 +13,21 @@ const SlingleProjectSlider = ({ data }) => {
   const [thumbsSwiper, setThumbsSwiper] = useState(null);
 
   const renderSlider = () => {
-    return data?.map((item) => {
+    if (data?.length) {
+      return data?.map((item) => {
+        return (
+          <SwiperSlide key={item.id}>
+            <img src={global_path_server + item.img} alt="slider" />
+          </SwiperSlide>
+        );
+      });
+    } else {
       return (
         <SwiperSlide>
-          <img src={global_path_server + item.img} alt="slider" />
+          <h2>no image</h2>
         </SwiperSlide>
       );
-    });
+    }
   };
 
   return (
@@ -39,17 +47,19 @@ const SlingleProjectSlider = ({ data }) => {
       >
         {renderSlider()}
       </Swiper>
-      <Swiper
-        onSwiper={setThumbsSwiper}
-        spaceBetween={10}
-        slidesPerView={6}
-        freeMode={true}
-        watchSlidesProgress={true}
-        modules={[FreeMode, Navigation, Thumbs]}
-        className={"mySwiperSingleProject"}
-      >
-        {renderSlider()}
-      </Swiper>
+      {data?.length !== 0 ? (
+        <Swiper
+          onSwiper={setThumbsSwiper}
+          spaceBetween={10}
+          slidesPerView={6}
+          freeMode={true}
+          watchSlidesProgress={true}
+          modules={[FreeMode, Navigation, Thumbs]}
+          className={"mySwiperSingleProject"}
+        >
+          {renderSlider()}
+        </Swiper>
+      ) : undefined}
     </>
   );
 };

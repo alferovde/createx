@@ -51,10 +51,6 @@ const SingleNewsPage = () => {
     });
   };
 
-  //   console.log(
-  //     singleNewsPage?.newsID !== undefined ? singleNewsPage.newsID[0] : ""
-  //   );
-
   return (
     <PageProvider isError={isError} isLoading={isLoading}>
       <div className={style.single_news_page}>

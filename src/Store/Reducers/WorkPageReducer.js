@@ -60,7 +60,6 @@ export const workPageSlice = createSlice({
     builder.addCase(fetchWorkPageServiceId.fulfilled, (state, action) => {
       state.isLoadingProjectArray = false;
 
-      // console.log("--->", action.payload.data);
       state.projectArray = action.payload.data;
     });
     builder.addCase(fetchWorkPageServiceId.rejected, (state, action) => {

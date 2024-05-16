@@ -37,9 +37,17 @@
   width: 300px;
   height: 100vh;
   position: fixed;
-  background-color: #00eeff;
+  background-color: #ff59308c;
   top: 0;
   right: 0;
   z-index: 1000;
   color: white;
+
+  nav {
+    display: flex;
+    flex-direction: column;
+    font-size: 26px;
+    padding: 100px 0 0 30px;
+    gap: 30px;
+  }
 }
