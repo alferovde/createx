@@ -8,7 +8,7 @@ export const headerMenu = [
 
 export const footerMenu = [
   { id: 1, href: "/about", link: "About Us" },
-  { id: 2, href: "/available", link: "Available Positions" },
+  { id: 2, href: "/about/positions", link: "Available Positions" },
   { id: 3, href: "/contact", link: "Contacts" },
 
   { id: 4, href: "/service", link: "Services" },
