@@ -16,6 +16,7 @@ import NewsPage from "./Pages/NewsPage/NewsPage";
 import SingleNewsPage from "./Pages/SingleNewsPage/SingleNewsPage";
 import ContactPage from "./Pages/ContactPage/ContactPage";
 import OnTop from "./Components/OnTop/OnTop";
+const global_path_server = process.env.REACT_APP_STORAGE_SERVER;
 function App() {
   return (
     <div className="main">

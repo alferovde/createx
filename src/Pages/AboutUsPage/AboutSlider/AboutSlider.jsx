@@ -7,7 +7,7 @@ import "swiper/css/thumbs";
 import "./about_slider.scss";
 import { Swiper, SwiperSlide, SwiperClass } from "swiper/react";
 import { FreeMode, Navigation, Thumbs } from "swiper/modules";
-const global_path_server = "http://127.0.0.1:8000/storage/";
+const global_path_server = process.env.REACT_APP_STORAGE_SERVER;
 const AboutSlider = ({ data }) => {
   const [thumbsSwiper, setThumbsSwiper] = useState(null);
 

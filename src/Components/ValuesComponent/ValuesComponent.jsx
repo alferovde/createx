@@ -1,6 +1,7 @@
 import React from "react";
 import style from "./values_component.module.scss";
-const global_path_server = "http://127.0.0.1:8000/storage/";
+
+const global_path_server = process.env.REACT_APP_STORAGE_SERVER;
 const ValuesComponent = ({ data }) => {
   const renderValues = () => {
     return data?.map((item) => {

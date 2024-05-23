@@ -12,7 +12,7 @@ export const fetchSingleProjectPage = createAsyncThunk(
 
   async (id) => {
     let result = await axios
-      .get(`http://127.0.0.1:8000/api/createx/work/${id}`)
+      .get(`http://mainserver.dealferov.ru/public/api/createx/work/${id}`)
       .then((response) => response);
 
     return result;

@@ -6,7 +6,7 @@ import "swiper/css/navigation";
 import { useNavigate } from "react-router-dom";
 import "./slide_item.scss";
 import { Navigation, FreeMode } from "swiper/modules";
-const global_path_server = "http://127.0.0.1:8000/storage/";
+const global_path_server = process.env.REACT_APP_STORAGE_SERVER;
 const SliderPortfolio = ({ data, title }) => {
   let dataProjects = data?.service_projects;
   let dataTypes = data?.types;
@@ -35,8 +35,6 @@ const SliderPortfolio = ({ data, title }) => {
                 navigate(`/work/${item.title}`, {
                   state: { id: item.id },
                 });
-                //???
-                // window.location.reload();
               }}
             >
               View Project

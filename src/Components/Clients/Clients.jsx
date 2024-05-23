@@ -1,6 +1,6 @@
 import React from "react";
 import style from "./clients.module.scss";
-const global_path_server = "http://127.0.0.1:8000/storage/";
+const global_path_server = process.env.REACT_APP_STORAGE_SERVER;
 const Clients = ({ bgColor, title, data, sub_title = "", full }) => {
   const renderList = () => {
     if (full) {

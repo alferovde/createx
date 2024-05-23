@@ -23,8 +23,6 @@ const MainPage = () => {
 
   useEffect(() => {
     dispatch(fetchMainPAge());
-
-    // window.addEventListener("scroll", () => console.log(window.scrollY));
   }, []);
 
   return (

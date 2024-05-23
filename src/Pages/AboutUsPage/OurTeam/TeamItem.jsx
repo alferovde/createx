@@ -1,7 +1,7 @@
 import React from "react";
 import style from "./our_team.module.scss";
 import { svgSprite } from "../../../Store/localStore";
-const global_path_server = "http://127.0.0.1:8000/storage/";
+const global_path_server = process.env.REACT_APP_STORAGE_SERVER;
 
 const TeamItem = ({ img, name, role }) => {
   const renderSocialLink = () => {

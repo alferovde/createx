@@ -13,7 +13,7 @@ export const fetchNewsPage = createAsyncThunk(
   async (data) => {
     let result = await axios
       .get(
-        `http://127.0.0.1:8000/api/createx/news/${data.currentCategory}?page=${data.currentPage}`
+        `http://mainserver.dealferov.ru/public/api/createx/news/${data.currentCategory}?page=${data.currentPage}`
       )
       .then((response) => response);
 

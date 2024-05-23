@@ -16,6 +16,7 @@ import Testimonials from "../../Components/Testimonials/Testimonials";
 import Clients from "../../Components/Clients/Clients";
 import ContactForm from "../../Components/ContactForm/ContactForm";
 export const ServiceListActiveValue = createContext(null);
+
 const WorkPage = () => {
   const isError = useSelector((state) => state.workPage.isError);
   const isLoading = useSelector((state) => state.workPage.isLoading);
@@ -56,10 +57,7 @@ const WorkPage = () => {
           text={WorkPageData.text}
         />
         <div className={`${style.work_page_list} `}>
-          <ServiceListActiveValue.Provider
-            // value={{ active, setActive }}
-            value={{ loadValue, setLoadValue }}
-          >
+          <ServiceListActiveValue.Provider value={{ loadValue, setLoadValue }}>
             <ServiceListRender data={workPage.service_list} full={false} />
             <PageProvider
               isError={isErrorProjectArray}

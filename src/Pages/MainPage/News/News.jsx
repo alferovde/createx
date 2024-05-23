@@ -4,7 +4,7 @@ import NewaItem from "../../../Components/NewaItem/NewaItem";
 import NewsItemSimple from "../../../Components/NewaItem/NewsItemSimple";
 import MyButton from "../../../Components/MyButton/MyButton";
 import { useNavigate } from "react-router-dom";
-const global_path_server = "http://127.0.0.1:8000/storage/";
+const global_path_server = process.env.REACT_APP_STORAGE_SERVER;
 const News = ({ data }) => {
   const navigate = useNavigate();
   const renderList = () => {

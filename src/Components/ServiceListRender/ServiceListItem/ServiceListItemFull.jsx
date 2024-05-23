@@ -3,7 +3,7 @@ import style from "./service_item.module.scss";
 import parse from "html-react-parser";
 import { ServiceListActiveValue } from "../../../Pages/WorkPage/WorkPage";
 
-const global_path_server = "http://127.0.0.1:8000/storage/";
+const global_path_server = process.env.REACT_APP_STORAGE_SERVER;
 
 const ServiceListItemFull = ({ title, icon_svg, id, text }) => {
   let svg_img = parse(icon_svg);

@@ -11,7 +11,7 @@ export const fetchPositionPAge = createAsyncThunk(
 
   async () => {
     let result = await axios
-      .get("http://127.0.0.1:8000/api/createx/position")
+      .get("http://mainserver.dealferov.ru/public/api/createx/position")
       .then(function (response) {
         return response;
       });

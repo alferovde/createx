@@ -12,7 +12,7 @@ export const fetchServicePage = createAsyncThunk(
 
   async () => {
     let result = await axios
-      .get("http://127.0.0.1:8000/api/createx/services")
+      .get("http://mainserver.dealferov.ru/public/api/createx/services")
       .then((response) => response);
 
     return result;

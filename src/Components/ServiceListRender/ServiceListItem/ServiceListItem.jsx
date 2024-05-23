@@ -2,7 +2,7 @@ import React, { useState } from "react";
 import style from "./service_item.module.scss";
 import { useNavigate } from "react-router-dom";
 import parse from "html-react-parser";
-const global_path_server = "http://127.0.0.1:8000/storage/";
+const global_path_server = process.env.REACT_APP_STORAGE_SERVER;
 const ServiceListItem = ({ id, title, text, main_img, icon_svg }) => {
   let svg_img = parse(icon_svg);
   const navigate = useNavigate();
